@@ -1,0 +1,41 @@
+{
+	"name": "chapter-01",
+	"description": "Build a Twitter Like app using the MVC design pattern",
+	"license": "MIT",
+	"author": {
+		"name": "Jickoo",
+		"url": "https://github.com/jickoo/node-blueprint"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jickoo/node-blueprint"
+	},
+	"keywords": [
+		"MVC",
+		"Express Application",
+		"Expressjs"
+	],
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node app.js"
+	},
+	"dependencies": {
+		"cookie-parser": "~1.4.3",
+		"debug": "~2.6.9",
+		"ejs": "~2.5.7",
+		"express": "~4.16.0",
+		"http-errors": "~1.6.2",
+		"morgan": "~1.9.0",
+		"node-sass-middleware": "0.11.0",
+		"connect-flash": "^0.1.1",
+		"connect-mongo": "^1.1.0",
+		"mongoose": "^4.4.5",
+		"express-session": "^1.13.0",
+		"gravatar": "^1.4.0",
+		"bcrypt-nodejs": "0.0.3",
+		"passport": "^0.3.2",
+		"passport-local": "^1.0.0",
+		"serve-favicon": "~2.3.0"
+	}
+}
