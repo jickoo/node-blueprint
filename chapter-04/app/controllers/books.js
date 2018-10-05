@@ -14,7 +14,7 @@ module.exports = function (app) {
 // Get pictures list
 router.get('/books', function (req, res, next) {
 
-  Picture.all().then(function (photos) {
+  Picture.all({index: true}, function (err, photos) {
     console.log(photos);
 
     res.render('book/books', {
@@ -35,12 +35,14 @@ router.get('/books/add', function (req, res, next) {
 // Post to
 router.post('/books/add', multipartMiddleware, function (req, res, next) {
   // Checking the file received
-  console.log(req.files);
+  // console.log(req.files);
   // create a new instance using Picture Model
   var photo = new Picture(req.body);
   // Get temp file path
   var imageFile = req.files.image.path;
+
   // Upload file to Cloudinary
+
   cloudinary.uploader.upload(imageFile,
     {
       tags: 'photobook',
